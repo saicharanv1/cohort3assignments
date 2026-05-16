@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* nav {
+  font-family: "Courier New", Courier, monospace;
+  transform: rotate(90deg);
+  transform-origin: top left;
+  background-color: gray;
+  width: 100vh;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 60px;
+  z-index: 1000;
+} */
+
+nav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transform: rotate(270deg);
+  transform-origin: top left;
+  /* background-color: gray; */
+  width: 100vh;
+  height: 60px;
+  /* position: fixed; */
+  position: relative;
+  bottom: -100vh;
+  left: 0;
+  z-index: 1000;
+  padding-left: 50px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: black;
+}
+
+#main-grid {
+  width: calc(100vw);
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "nav left-cell portfolio portfolio portfolio"
+    "nav left-cell center-cell center-cell right-cell"
+    "nav left-cell bottom-left bottom-right bottom-right";
+  grid-template-columns: 60px 2fr 1fr 1fr 0.75fr;
+  grid-template-rows: 2fr 4.5fr 3.5fr;
+  gap: 40px;
+}
+
+nav {
+  grid-area: nav;
+}
+
+#left {
+  grid-area: left-cell;
+  /* background-color: #b098f9; */
+  border-radius: 30px;
+  position: relative;
+}
+
+#left-cut-top {
+  clip-path: polygon(200px 0%, 140% 0%, 150% 150%, 0% 150%, 0% 180px);
+  background-color: #b098f9;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 0;
+  z-index: 0;
+  border-top-right-radius: 30px;
+}
+
+#left-cut-bottom {
+  background-color: #b098f9;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px);
+  top: 60px;
+  z-index: 0;
+  border-radius: 30px;
+}
+
+#portfolio {
+  grid-area: portfolio;
+  width: 100%;
+}
+
+#center {
+  grid-area: center-cell;
+  border-radius: 30px;
+  background-image: url(./resources/crane.jpg);
+  background-size: contain;
+  background-position: center;
+}
+
+#bottom-left {
+  grid-area: bottom-left;
+  background-color: #4a4a4a;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom-right {
+  grid-area: bottom-right;
+  background-color: #daea61;
+  border-radius: 30px;
+  position: relative;
+}
+
+#right {
+  grid-area: right-cell;
+  background-color: #9b6ef4;
+  border-radius: 30px;
+}
+
+#portfolio p {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5rem;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#bottom-left img {
+  height: 60px;
+}
+
+#bottom-left p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 32px;
+}
+
+#clients-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bottom-right #globe-container {
+  background-color: black;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 60%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+}
+
+#bottom-right #globe-container img {
+  height: 130px;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+
+#global-design-container {
+  position: absolute;
+  right: 0;
+  width: 55%;
+  background-color: #ffcd62;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#text172 {
+  font-size: 32px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: bold;
+}
+
+#global-design-container #global-design-text {
+  font-size: 24px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#awards-text {
+  font-size: 27px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#right #right-top-text {
+  height: 50%;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #92e7ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#right #right-bottom-text {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#photo-container img {
+  height: 370px;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+}
+
+#left #photo-bottom-text #text-a {
+  font-size: 80px;
+  font-weight: 200;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#left #photo-bottom-text #text-b {
+  font-size: 90px;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#left #photo-bottom-text #text-c {
+  font-size: 90px;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#left #photo-bottom-text #text-d {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#left #photo-bottom-text {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: -20px;
+}
+
+#left #photo-circle {
+  width: 130px;
+  height: 130px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#left #photo-circle2 {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#left #photo-outer-circle {
+  border-top: 3px solid rgb(0, 0, 0);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 9%;
+  right: 8.1%;
+}
+
+#left #about-me-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+#left #about-me-container #design-container #design-1 {
+  width: 25px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+}
+#left #about-me-container #design-container #design-2 {
+  width: 25px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+#left #about-me-container #design-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#left #about-me-container {
+  padding: 10px;
+}
+
+#left #about-me-container #about-me-text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
