@@ -1,13 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS assignment 2
-    </title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS positions2 assignment</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <p>INSECT</p>
+        <div id="search">
+          <input type="text" class="search-bar" placeholder="Search..." />
+          <i class="ri-search-line"></i>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="">Home</a>
+        <a href="">Shop</a>
+        <a href="">About</a>
+        <a href="">Gallery</a>
+        <a href="">Contact</a>
+      </div>
+    </nav>
+    <main>
+      <div class="main-container">
+        <div class="left-container">
+          <div class="left-container1"><p>classification</p></div>
+          <div class="left-container2">
+            <ul>
+              <li><span>Class:</span><br />Insecta</li>
+              <br />
+              <hr />
+              <br />
+              <li><span>Order:</span><br />Coleoptera</li>
+              <br />
+              <hr />
+              <br />
+              <li><span>Family:</span><br />Cerambycidae</li>
+              <br />
+              <hr />
+              <br />
+              <li><span>Sub-Family:</span><br />Cerambycidae</li>
+              <br />
+              <hr />
+              <br />
+              <li><span>Tribe:</span><br />Callicromatini</li>
+              <br />
+              <hr />
+              <br />
+              <li><span>Genus:</span><br />pachyteria</li>
+            </ul>
+          </div>
+        </div>
+        <div class="middle-container">
+          <img src="./resources/cockroach.png" alt="" />
+        </div>
+        <div class="right-container">
+          <h1>pachyteria<br />equestris</h1>
+          <div class="right-container1">
+            <div class="right-container1-left">
+              <div class="left1">
+                <img src="./resources/cockroachskeleton.png" alt="" />
+                <p>32 mm</p>
+              </div>
+              <div class="left-middle"></div>
+              <div class="left2">
+                <div class="left2-content">
+                  <div class="left2-content-container">
+                    <i class="ri-map-pin-line"></i>
+                    <p>Locality:<br />Malaysia</p>
+                  </div>
+                  <div class="left2-content-container">
+                    <i class="ri-men-line"></i>
+                    <p>Sex:<br />Male</p>
+                  </div>
+                  <div class="left2-content-container">
+                    <i class="ri-ruler-line"></i>
+                    <p>Size:<br />32mm / 12mm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-container2">
+            <p id="price">$5.99</p>
+            <div><i class="ri-toggle-line"></i> View detailed antenne</div>
+            <div><i class="ri-toggle-line"></i> View underside</div>
+            <button>Add to collection</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
